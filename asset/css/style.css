@@ -51,7 +51,7 @@ header a {
     list-style-type: none;
 }
 
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
 }
 
@@ -112,9 +112,55 @@ main {
     padding-left: 10px;
 }
 
-#cover-text > h2, #cover-text > h3 {
+#cover-text>h2, 
+#cover-text>h3 {
     color: #ffffff;
 }
+/* Reasons section */
+#reasons {
+    width: 90%;
+    margin: 20px auto;
+}
+
+#reason h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 280%;
+}
+#benefits-physical>div,
+#benefit-mental>div {
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+#benefits p {
+    padding: 0 20px;
+}
+
+#benefits hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
+}
+
+#circle-cover-bg {
+    background: url('../images/reasons-image.webp') no-repeat top center / cover;
+    height: 90vw;
+    width: 90vw;    
+    margin-bottom: 20px;
+    /* Makes the square image into a circle */
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+
+#benefits-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 /* Footer */
 #social-networks {
     text-align: center;
@@ -132,6 +178,7 @@ main {
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+   
     /* Header */
     nav {
         display: block;
@@ -145,13 +192,15 @@ main {
         display: flex;
     }
 
-    #menu > li {
+    #menu>li {
         padding-left: 1rem;
     }
-.nav-toggle-label {
+    
+    .nav-toggle-label {
     display: none;
-}
-#logo {
+    }
+
+    #logo {
     font-size: 280%;
     line-height: 75px;
     margin: 0 0.5rem;
@@ -169,9 +218,59 @@ main {
     right: 50px;
 }
 
+  /* Reasons section */
+  #benefits-physical,
+  #benefits-mental {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+  }
+
+  #benefits-physical>div,
+  #benefits-mental>div {
+      width: 75%;
+  }
+  #benefits-mental>div {
+    text-align: end;
+    align-self: flex-end;
+  }
+
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover{
         border-bottom: 1px solid #3a3a3a;
     }
 }
+
+@media screen and (min-width: 1200px) {   
+   /* Reasons section */
+   #benefits {
+     display: flex;
+     flex-direction: row;
+    }
+
+    #benefits > div {
+        flex: 1;
+    }
+
+    #benefits-image {
+        order: 0
+    }
+
+    #benefits-mental {
+        order: 1;
+    }
+
+    #benefits-mental > div {
+        align-self: flex-start;
+    }
+
+    #benefits-physical > div {
+        align-self: flex-end;
+    }
+}
+
+
+
+
+
